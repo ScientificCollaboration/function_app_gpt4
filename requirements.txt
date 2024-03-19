@@ -1,0 +1,15 @@
+azure-functions
+openai
+PyPDF2  
+azure-ai-openai 
+pdfminer.six  
+azure-storage
+azure-identity
+azure-storage-blob
+
+
+
+
+  
+
+
