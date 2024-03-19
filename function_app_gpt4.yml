@@ -10,7 +10,7 @@ steps:
     publishWebProjects: true
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<service-connection-name>'
+    azureSubscription: 'BI and Data 2023'
     appType: 'webAppLinux'
     appName: 'function_app_gpt4.py'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
