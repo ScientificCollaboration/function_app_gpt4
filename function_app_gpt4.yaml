@@ -1,0 +1,16 @@
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'BI and Data 2023'
+    appType: 'webAppLinux'
+    appName: 'function_app_gpt4.py'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
